@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/consul/api"
 )
 
-func NewServive(serviceAddress string, serviceName string, serviceId int, servicePort string) error {
+func NewService(serviceAddress string, serviceName string, serviceId int, servicePort string) error {
 	client, err := api.NewClient(api.DefaultConfig())
 	if err != nil {
 		return err

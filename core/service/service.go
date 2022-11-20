@@ -130,7 +130,7 @@ func (this *Service) registerService(serviceType string, servicePort string) {
 
 	//注册到Consul
 	serviceName := packageServiceName(serviceType, this.name)
-	err := consul.NewServive(this.ip, serviceName, this.id, servicePort)
+	err := consul.NewService(this.ip, serviceName, this.id, servicePort)
 	CheckError(err)
 
 	INFO("join consul service...", serviceName, servicePort)
