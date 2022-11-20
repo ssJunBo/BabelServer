@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message Req{
+    string serviceIdentify = 1;
+    uint64 userSessionId = 2;
+    bytes data = 3;
+}
+
+message Res{
+    repeated uint64 userSessionIds = 2;
+    bytes data = 3;
+}
+
+service Ipc{
+    rpc Transfer(stream Req) returns (stream Res) {}
+}

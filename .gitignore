@@ -1,0 +1,11 @@
+.idea/
+bin/
+/logs/
+pkg/
+release/
+consul_run.sh
+mongod_run.sh
+redis_run.sh
+.DS_Store
+dump.rdb
+
